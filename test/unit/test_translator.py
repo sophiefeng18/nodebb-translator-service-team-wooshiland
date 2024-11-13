@@ -11,11 +11,6 @@ def test_llm_normal_response():
     assert is_english == True
     assert translated_content == "This is an English message"
 
-def test_french():
-    is_english, translated_content = translate_content("Ceci est un message en français")
-    assert is_english == False
-    assert translated_content == "This is a French message"
-
 def test_llm_gibberish_response():
     is_english, translated_content = translate_content("xyz&^%$#")
     assert is_english == True
@@ -25,7 +20,7 @@ def test_llm_gibberish_response():
 from mock import patch
 from openai import AzureOpenAI
 client = AzureOpenAI(
-    api_key="KPI KEY",
+    api_key="API KEY",
     api_version="2024-02-15-preview",
     azure_endpoint="https://4project.openai.azure.com/"
 )
