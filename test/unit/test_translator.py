@@ -25,7 +25,7 @@ def test_llm_gibberish_response():
 from mock import patch
 from openai import AzureOpenAI
 client = AzureOpenAI(
-    api_key="fa2ccd458a0e41ffbfd72614e79c077e",
+    api_key="KPI KEY",
     api_version="2024-02-15-preview",
     azure_endpoint="https://4project.openai.azure.com/"
 )
