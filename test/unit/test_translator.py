@@ -2,11 +2,11 @@ from src.translator import translate_content
 from openai import AzureOpenAI
 import os
 
-client = AzureOpenAI(
-    api_key=os.environ.get("API_KEY"),  
-    api_version="2024-02-15-preview",
-    azure_endpoint="https://4project.openai.azure.com/"  
-)
+# client = AzureOpenAI(
+#     api_key=os.environ.get("API_KEY"),  
+#     api_version="2024-02-15-preview",
+#     azure_endpoint="https://4project.openai.azure.com/"  
+# )
 
 def test_chinese():
     is_english, translated_content = translate_content("这是一条中文消息")
