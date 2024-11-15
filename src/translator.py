@@ -1,6 +1,8 @@
 from openai import AzureOpenAI
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
 # Initialize the Azure OpenAI client
 client = AzureOpenAI(
     api_key= os.getenv('API_KEY'),
