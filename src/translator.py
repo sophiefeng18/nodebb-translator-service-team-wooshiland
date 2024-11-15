@@ -1,5 +1,9 @@
 from openai import AzureOpenAI
 import os
+#chatgpt
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize the Azure OpenAI client
 client = AzureOpenAI(
