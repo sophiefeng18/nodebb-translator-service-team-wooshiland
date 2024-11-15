@@ -1,5 +1,15 @@
 from src.translator import translate_content
+from dotenv import load_dotenv
+from openai import AzureOpenAI
+import os
 
+load_dotenv()
+
+client = AzureOpenAI(
+    api_key=os.getenv("API_KEY"),  
+    api_version="2024-02-15-preview",
+    azure_endpoint="https://team-turtles-ai.openai.azure.com/"  
+)
 
 def test_chinese():
     is_english, translated_content = translate_content("这是一条中文消息")
