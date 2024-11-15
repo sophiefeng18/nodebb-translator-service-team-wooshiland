@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 env:
-  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+  API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
   
 jobs:
   build:
