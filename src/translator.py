@@ -4,6 +4,7 @@ import os
 
 load_dotenv()
 # Initialize the Azure OpenAI client
+print(type(os.environ.get('API_KEY')))
 client = AzureOpenAI(
     api_key= os.environ.get("API_KEY"),
     api_version="2024-02-15-preview",
