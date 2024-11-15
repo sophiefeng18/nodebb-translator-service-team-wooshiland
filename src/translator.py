@@ -1,6 +1,6 @@
 from openai import AzureOpenAI
 import os
-#chatgpt
+ #chatgpt
 from dotenv import load_dotenv
 
 load_dotenv()
