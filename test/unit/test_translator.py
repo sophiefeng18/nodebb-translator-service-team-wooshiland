@@ -16,12 +16,11 @@ def test_llm_gibberish_response():
     assert is_english == True
     assert translated_content == ""
 
+
 ### From ChatGPT
 from mock import patch
 from openai import AzureOpenAI
 import os
-
-# Initialize the Azure OpenAI client
 client = AzureOpenAI(
     api_key= os.getenv('API_KEY'),
     api_version="2024-02-15-preview",
