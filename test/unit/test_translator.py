@@ -8,7 +8,7 @@ load_dotenv()
 client = AzureOpenAI(
     api_key=os.getenv("API_KEY"),  
     api_version="2024-02-15-preview",
-    azure_endpoint="https://team-turtles-ai.openai.azure.com/"  
+    azure_endpoint="https://4project.openai.azure.com/"  
 )
 
 def test_chinese():
