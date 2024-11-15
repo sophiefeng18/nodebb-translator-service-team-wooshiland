@@ -10,10 +10,6 @@ on:
       - f24
   workflow_dispatch:
 
-#ChatGPT
-env:
-  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPEN_API_KEY }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
