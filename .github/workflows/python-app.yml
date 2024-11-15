@@ -12,14 +12,12 @@ on:
 permissions:
   contents: read
 
-env:
-  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }} # added secret
-  
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }} # added secret
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
