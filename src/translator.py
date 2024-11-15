@@ -9,7 +9,7 @@ client = AzureOpenAI(
 )
 import openai
 def get_translation(post: str) -> str:
-    context = "Translate the following text into English, only respond with the exact translation and no other words:"
+    context = "Translate the following text into English, only respond with the exact translation, only put punctuation exactly as it is in the origional text, and no other words:"
     prompt = f"{context}\n\n{post}"
     response = client.chat.completions.create(
       model="gpt-4o-mini",
