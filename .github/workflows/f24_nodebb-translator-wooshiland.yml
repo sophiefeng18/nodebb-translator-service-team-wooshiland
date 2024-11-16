@@ -29,6 +29,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+        #ChatGPT
+      - name: set up env
+        run: |
+        env:
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPEN_API_KEY }}
         
       # Source: ChatGPT
       - name: Run unit tests
@@ -64,6 +70,12 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
+
+        #ChatGPT
+      - name: set up env
+        run: |
+        env:
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPEN_API_KEY }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
