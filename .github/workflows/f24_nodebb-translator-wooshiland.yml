@@ -31,10 +31,10 @@ jobs:
         run: pip install -r requirements.txt
 
         #ChatGPT
-      - name: set up env
-        run: |
+      - name: Set environment variables
         env:
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+        run: echo "Environment variable set successfully"
      
       # Source: ChatGPT
       - name: Run unit tests
