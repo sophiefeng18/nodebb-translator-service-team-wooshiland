@@ -1,6 +1,10 @@
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 import os
+ #chatgpt
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # with help from ChatGPT
 from azure.identity import DefaultAzureCredential
@@ -24,7 +28,8 @@ load_dotenv()
 # print(type(os.environ.get('AZURE_OPENAI_API_KEY')))
 api_key = retrieved_secret.value
 client = AzureOpenAI(
-    api_key= api_key,
+    #api_key= api_key,
+    api_key= os.getenv('AZURE_OPENAI_API_KEY'),
     api_version="2024-02-15-preview",
     azure_endpoint="https://sophiefeng18.openai.azure.com/"
 )

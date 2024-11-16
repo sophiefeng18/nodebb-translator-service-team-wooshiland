@@ -2,6 +2,7 @@ Flask==3.0.0
 pytest==7.4.0
 mock
 openai
-python-dotenv
+python-dotenv #chatgpt
+sentence_transformers
 azure-keyvault-secrets
 azure-identity
