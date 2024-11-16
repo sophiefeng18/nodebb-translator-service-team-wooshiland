@@ -12,10 +12,6 @@ on:
 permissions:
   contents: read
 
-#ChatGPT
-env:
-  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPEN_API_KEY }}
-
 jobs:
   build:
 
