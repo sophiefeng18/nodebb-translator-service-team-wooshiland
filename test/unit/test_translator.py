@@ -1,3 +1,4 @@
+from openai import AzureOpenAI
 from src.translator import translate_content
 from sentence_transformers import SentenceTransformer, util
 model = SentenceTransformer('all-MiniLM-L6-v2')
