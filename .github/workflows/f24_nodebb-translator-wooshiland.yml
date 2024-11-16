@@ -35,9 +35,9 @@ jobs:
         run: |
         env:
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPEN_API_KEY }}
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_CLIENT_ID: "bb273e76-d7c5-4690-8460-7670b085b93a"
+          AZURE_TENANT_ID: "bb273e76-d7c5-4690-8460-7670b085b93a"
+          AZURE_CLIENT_SECRET: "4019209f-405f-4637-beb0-425ec343f1d3"
       # Source: ChatGPT
       - name: Run unit tests
         run: |
