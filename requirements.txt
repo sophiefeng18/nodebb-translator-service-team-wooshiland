@@ -3,3 +3,4 @@ pytest==7.4.0
 mock
 openai
 python-dotenv #chatgpt
+sentence_transformers
