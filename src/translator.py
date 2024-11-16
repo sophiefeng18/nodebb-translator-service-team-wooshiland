@@ -7,8 +7,14 @@ from dotenv import load_dotenv
 load_dotenv()
 # Initialize the Azure OpenAI client
 # print(type(os.environ.get('AZURE_OPENAI_API_KEY')))
+
+azure_api_key = os.environ.get('AZURE_OPENAI_API_KEY')
+
+if not azure_api_key:
+    raise ValueError("Environment variable AZURE_OPENAI_API_KEY is not set.")
+ 
 client = AzureOpenAI(
-    api_key= os.getenv("AZURE_OPENAI_API_KEY"),
+    api_key=azure_api_key,
     api_version="2024-02-15-preview",
     azure_endpoint="https://sophiefeng18.openai.azure.com/"
 )
