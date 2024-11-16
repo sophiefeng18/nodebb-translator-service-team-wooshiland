@@ -8,7 +8,7 @@ load_dotenv()
 # Initialize the Azure OpenAI client
 # print(type(os.environ.get('AZURE_OPENAI_API_KEY')))
 client = AzureOpenAI(
-    api_key= os.getenv("AZURE_OPENAI_API_KEY"),
+    api_key= os.getenv("api_key"),
     api_version="2024-02-15-preview",
     azure_endpoint="https://4project.openai.azure.com/"
 )
