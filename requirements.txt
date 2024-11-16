@@ -4,3 +4,5 @@ mock
 openai
 python-dotenv #chatgpt
 sentence_transformers
+azure-keyvault-secrets
+azure-identity
