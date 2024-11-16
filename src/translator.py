@@ -5,30 +5,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-# with help from ChatGPT
-from azure.identity import DefaultAzureCredential
-from azure.keyvault.secrets import SecretClient
-
-# Define Key Vault URL
-key_vault_url = "https://azure-openai-api-key.vault.azure.net/"
-
-# Authenticate using DefaultAzureCredential
-credential = DefaultAzureCredential()
-client = SecretClient(vault_url=key_vault_url, credential=credential)
-
-# Retrieve the secret
-secret_name = "AZURE_OPENAI_API_KEY"
-retrieved_secret = client.get_secret(secret_name)
-
-print(f"Secret Value: {retrieved_secret.value}")
-
-load_dotenv()
 # Initialize the Azure OpenAI client
 # print(type(os.environ.get('AZURE_OPENAI_API_KEY')))
-api_key = retrieved_secret.value
 client = AzureOpenAI(
-    #api_key= api_key,
     api_key= os.getenv('AZURE_OPENAI_API_KEY'),
     api_version="2024-02-15-preview",
     azure_endpoint="https://4project.openai.azure.com/"
